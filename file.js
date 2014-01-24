@@ -1,12 +1,19 @@
-var Foo = (function () {
-    function Foo() {
+var Greeter = (function () {
+    function Greeter(message) {
+        this.greeting = message;
     }
-    Foo.prototype.quack = function () {
-        window.alert("quack2");
+    Greeter.prototype.greet = function () {
+        return "Hello, " + this.greeting;
     };
-
-    Foo.prototype.foo = function (testing) {
-        console.log(testing);
-    };
-    return Foo;
+    return Greeter;
 })();
+
+var greeter = new Greeter("world");
+
+var button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function () {
+    alert(greeter.greet());
+};
+
+document.body.appendChild(button);

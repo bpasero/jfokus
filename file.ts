@@ -1,14 +1,22 @@
-class Foo {
-	
-	public quack() {
-		window.alert("quack2");
-	}
-	
-	public foo(testing:Testing) {
-		console.log(testing);
-	}
+class Greeter {
+    
+    private greeting: string;
+    
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    
+    greet():string {
+        return "Hello, " + this.greeting;
+    }
 }
 
-interface Testing {
-	foo:string;
+var greeter = new Greeter("world");
+
+var button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function() {
+    alert(greeter.greet());
 }
+
+document.body.appendChild(button);
