@@ -1,0 +1,18 @@
+{
+  "name": "JFokus",
+  "version": "0.6.0",
+  "author": {
+    "name": "Benjamin Pasero"
+  },
+  "private": true,
+  "main": "./server/run-monaco.js",
+  "engines": {
+    "node": ">= 0.10.0 < 0.11.0"
+  },
+  "dependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-typescript": "0.2.7",
+    "grunt-cli": "~0.1.12"
+  }
+}
